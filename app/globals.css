@@ -1,1 +1,66 @@
-:root {}
+:root {
+  --color-main: #ff5656;
+  --color-black: #222;
+  --color-green: green;
+  --color-blue: blue;
+  --color-red: red;
+
+  --color-gray100: #f1f1f1;
+  --color-gray200: #e1e1e1;
+  --color-gray300: #d1d1d1;
+
+  --font-main: 'Pretendard';
+  --fsize-h2: 20px;
+  --fsize-h3: 18px;
+  --fsize-h4: 16px;
+  --fsize-main: 14px;
+  --fsize-sub: 12px;
+
+  --fcolor-basic: #333;
+  --fcolor-main: var(--color-main);
+  --fcolor-placeholder: var(--color-gray300);
+
+  --fweight-light: 200;
+  --fweight-normal: 400;
+  --fweight-bold: 600;
+}
+
+body* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  font-size: 0;
+  font-weight: var(--fweight-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  all: unset;
+  font-weight: var(--fweight-bold);
+}
+
+h2 {
+  font-size: var(--fsize-h2);
+}
+
+h3 {
+  font-size: var(--fsize-h3);
+}
+
+h4 {
+  font-size: var(--fsize-h4);
+}
+
+h2 a,
+button,
+input[type="button"],
+input[type="submit"] {
+  all: unset;
+  font-size: var(--fsize-main);
+  cursor: pointer;
+}
