@@ -1,0 +1,33 @@
+.basic {
+  padding: 12px 10px;
+  border: 1px solid var(--color-black);
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: var(--fsize-main);
+  font-weight: var(--fweight-bold);
+  transition-property: background-color, color;
+  transition-duration: var(--trans-short), var(--trans-short);
+
+}
+
+.basic:hover {
+  background-color: var(--color-black);
+  color: #fff;
+}
+
+
+.normal {
+  color: var(--fcolor-black);
+}
+
+.submit {
+  border-color: var(--color-main);
+  color: var(--color-main)
+}
+
+.submit:hover {
+  background-color: var(--color-main);
+  color: #fff;
+}
+
+.cancel {}
