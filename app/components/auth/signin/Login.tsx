@@ -5,11 +5,24 @@ import button from "@/app/styles/button.module.css";
 import input from "@/app/styles/input.module.css";
 import styled from "styled-components";
 import { inputValue } from "@/app/utils/inputValue";
+import { useRouter } from "next/navigation";
 
 export const Login = () => {
   const [userId, setUserId] = useState("");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+
+  const router = useRouter();
+
+  const handleSubmit = () => {
+    //
+  };
+
+  const handleLocation = (event: React.FormEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    if (event.currentTarget.textContent === "등록신청") router.push("./signup");
+    else if (event.currentTarget.textContent === "비밀번호찾기") console.log(3);
+  };
 
   return (
     <>
@@ -20,20 +33,26 @@ export const Login = () => {
             <input id="userId" className={input.basic + " " + input.borderBottom} placeholder=" " type="text" value={userId} onChange={(event) => inputValue(event, setUserId)} />
           </div>
           <div>
-            <label htmlFor="userId">직원이름</label>
+            <label htmlFor="userName">직원이름</label>
             <input id="userName" className={input.basic + " " + input.borderBottom} placeholder=" " type="text" value={userName} onChange={(event) => inputValue(event, setUserName)} />
           </div>
           <div>
             <label htmlFor="userPassword">비밀번호</label>
-            <input id="userPassword" className={input.basic + " " + input.borderBottom} placeholder=" " type="password" name="" value={password} onChange={(event) => inputValue(event, setPassword)} />
+            <input id="userPassword" className={input.basic + " " + input.borderBottom} placeholder=" " type="password" value={password} onChange={(event) => inputValue(event, setPassword)} />
           </div>
         </SectionStyle>
         <SectionStyle className="button-wrap">
-          <button className={button.basic + " " + button.submit}>로그인</button>
+          <button className={button.basic + " " + button.submit} onClick={handleSubmit}>
+            로그인
+          </button>
         </SectionStyle>
         <SectionStyle className="button-wrap">
-          <button className={button.basic + " " + button.normal}>등록신청</button>
-          <button className={button.basic + " " + button.normal}>비밀번호찾기</button>
+          <button className={button.basic + " " + button.normal} onClick={handleLocation}>
+            등록신청
+          </button>
+          <button className={button.basic + " " + button.normal} onClick={handleLocation}>
+            비밀번호찾기
+          </button>
         </SectionStyle>
       </FormStyle>
     </>
