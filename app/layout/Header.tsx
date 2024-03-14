@@ -20,4 +20,9 @@ const HeaderStyle = styled.header`
 
   text-align: center;
   line-height: var(--header-height);
+
+  & strong {
+    color: var(--color-main);
+    margin-right: 5px;
+  }
 `;

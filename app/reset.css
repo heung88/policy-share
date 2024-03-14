@@ -12,8 +12,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-strong {
+h6 {
   all: unset;
   font-weight: var(--fweight-bold);
 }
@@ -38,6 +37,10 @@ li {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+strong {
+  all: unset;
 }
 
 h2 a,
