@@ -3,13 +3,22 @@
 import React, { useState } from "react";
 import button from "@/app/styles/button.module.css";
 import input from "@/app/styles/input.module.css";
-import { inputValue } from "@/app/utils/inputValue";
 import styled from "styled-components";
+import { inputValue } from "@/app/utils/inputValue";
+import { useRouter } from "next/navigation";
 
 export const Signup = () => {
   const userId = "";
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
+
+  const handleSubmit = () => {};
+
+  const handleLocation = (event: React.FormEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    if (event.currentTarget.textContent === "취소") router.back();
+  };
 
   return (
     <>
@@ -29,8 +38,12 @@ export const Signup = () => {
           </div>
         </SectionStyle>
         <SectionStyle className="button-wrap">
-          <button className={button.basic + " " + button.submit}>신청</button>
-          <button className={button.basic + " " + button.cancel}>취소</button>
+          <button className={button.basic + " " + button.submit} onClick={handleSubmit}>
+            신청
+          </button>
+          <button className={button.basic + " " + button.cancel} onClick={handleLocation}>
+            취소
+          </button>
         </SectionStyle>
       </FormStyle>
     </>
