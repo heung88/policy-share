@@ -1,3 +1,9 @@
+import { Login } from "./components/login/Login";
+
 export default function Home() {
-  return <main>안녕하세요</main>;
+  return (
+    <>
+      <Login />
+    </>
+  );
 }
