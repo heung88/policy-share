@@ -5,7 +5,8 @@
 */
 
 .sign-in,
-.sign-up {
+.sign-up,
+.find-pw {
   width: 100%;
   height: calc(100vh - var(--header-height) - var(--footer-height));
   max-width: var(--max-width);
@@ -17,21 +18,24 @@
 }
 
 .sign-in section,
-.sign-up section {
+.sign-up section,
+.find-pw section {
   width: 100%;
   max-width: var(--max-width);
   margin-bottom: 10px;
 }
 
 .sign-in section.input-wrap,
-.sign-up section.input-wrap {
+.sign-up section.input-wrap,
+.find-pw section.input-wrap {
   position: relative;
   max-width: 400px;
   margin-bottom: 20px;
 }
 
 .sign-in section.input-wrap>div,
-.sign-up section.input-wrap>div {
+.sign-up section.input-wrap>div,
+.find-pw section.input-wrap>div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +44,8 @@
 }
 
 .sign-in section.button-wrap,
-.sign-up section.button-wrap {
+.sign-up section.button-wrap,
+.find-pw section.button-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,12 +55,14 @@
 }
 
 .sign-in .button-wrap button,
-.sign-up .button-wrap button {
+.sign-up .button-wrap button,
+.find-pw .button-wrap button {
   width: 100%;
 }
 
 .sign-in label,
-.sign-up label {
+.sign-up label,
+.find-pw label {
   margin-right: 10px;
   font-size: var(--fsize-h3);
 }
