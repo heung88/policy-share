@@ -1,9 +1,9 @@
-import { Login } from "@/app/components/userauth/signin/Login";
+import { Main } from "./components/main/public/Main";
 
 export default function Home() {
   return (
     <>
-      <Login />
+      <Main />
     </>
   );
 }

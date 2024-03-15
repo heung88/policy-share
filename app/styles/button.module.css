@@ -7,7 +7,6 @@
   font-weight: var(--fweight-bold);
   transition-property: background-color, color;
   transition-duration: var(--trans-short), var(--trans-short);
-
 }
 
 .basic:hover {
@@ -15,19 +14,31 @@
   color: #fff;
 }
 
-
-.normal {
+.basic.normal {
   color: var(--fcolor-black);
 }
 
-.submit {
+.basic.submit {
   border-color: var(--color-main);
   color: var(--color-main)
 }
 
-.submit:hover {
+.basic.submit:hover {
   background-color: var(--color-main);
   color: #fff;
 }
 
-.cancel {}
+.category {
+  height: var(--nav-height);
+  border: none;
+  background-color: #fff;
+  font-size: var(--fsize-main);
+  font-weight: var(--fweight-normal);
+  color: var(--fcolor-black);
+  transition-property: color;
+  transition-duration: var(--trans-short);
+}
+
+.category:hover {
+  color: var(--color-main);
+}

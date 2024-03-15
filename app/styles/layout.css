@@ -9,7 +9,7 @@
 main {
   width: 100%;
   max-width: var(--max-width);
-  margin: var(--header-height) auto 0;
+  margin: var(--header-total-height) auto 0;
 }
 
 .main-category {
@@ -17,7 +17,8 @@ main {
   height: var(--nav-height);
   margin-top: -7px;
   border-top: 1px solid var(--color-gray100);
-  border-bottom: 1px solid var(--color-gray100)
+  border-bottom: 1px solid var(--color-gray100);
+  overflow: hidden;
 }
 
 .main-category ul {
@@ -29,9 +30,55 @@ main {
   margin: 0 auto;
 }
 
-.main-category li {
+.main-category li,
+.admin-category li {
   line-height: var(--nav-height);
   font-size: var(--fsize-main);
+}
+
+.admin-category {
+  position: fixed;
+  bottom: calc(var(--footer-height) + 50px);
+  right: 50px;
+  border: 1px solid var(--color-gray300);
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px var(--color-shadow);
+  overflow: hidden;
+}
+
+.admin-category .category-title {
+  background-color: var(--color-gray200);
+  font-weight: var(--fweight-bold);
+  text-align: center;
+}
+
+.admin-category ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.admin-category li {
+  width: 100%;
+  height: var(--nav-height);
+  padding: 0 20px;
+  text-align: right;
+  background-color: #fff;
+}
+
+.admin-category li:not(:first-of-type) {
+  border-top: 1px solid var(--color-gray300);
+}
+
+.admin-category li a {
+  color: var(--color-black);
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+.admin-category li:hover a {
+  color: var(--color-main);
 }
 
 .main-header {
@@ -45,7 +92,7 @@ main {
   line-height: var(--header-height);
 }
 
-.main-header strong {
+.main-header a strong {
   color: var(--color-main);
   margin-right: 5px;
 }
