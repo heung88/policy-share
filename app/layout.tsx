@@ -2,9 +2,9 @@
 
 import { Header } from "./layout/Header";
 import { Footer } from "./layout/Footer";
-import styled from "styled-components";
 import "./globals.css";
 import "./reset.css";
+import "@/app/styles/layout.css";
 
 export default function RootLayout({
   children,
@@ -15,15 +15,9 @@ export default function RootLayout({
     <html lang="ko-kr">
       <body>
         <Header />
-        <MainStyle>{children}</MainStyle>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
   );
 }
-
-const MainStyle = styled.main`
-  width: 100%;
-  max-width: var(--max-width);
-  margin: var(--header-height) auto 0;
-`;

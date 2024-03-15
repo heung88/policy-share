@@ -1,4 +1,4 @@
-import { Login } from "@/app/components/auth/signin/Login";
+import { Login } from "@/app/components/userauth/signin/Login";
 
 export default function Home() {
   return (

@@ -1,28 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import "@/app/styles/layout.css";
 
 export const Header = () => {
   return (
-    <HeaderStyle>
+    <header className="main-header">
       <h2>
         <strong>YB</strong>정책확인방
       </h2>
-    </HeaderStyle>
+    </header>
   );
 };
-
-const HeaderStyle = styled.header`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: var(--header-height);
-  border-bottom: 1px solid var(--color-gray100);
-
-  text-align: center;
-  line-height: var(--header-height);
-
-  & strong {
-    color: var(--color-main);
-    margin-right: 5px;
-  }
-`;

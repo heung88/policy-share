@@ -1,0 +1,61 @@
+/* 
+  .signin
+  .signup
+  .findpw
+*/
+
+.sign-in,
+.sign-up {
+  width: 100%;
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in section,
+.sign-up section {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-bottom: 10px;
+}
+
+.sign-in section.input-wrap,
+.sign-up section.input-wrap {
+  position: relative;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.sign-in section.input-wrap>div,
+.sign-up section.input-wrap>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.sign-in section.button-wrap,
+.sign-up section.button-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 400px;
+  padding: 0 20px;
+}
+
+.sign-in .button-wrap button,
+.sign-up .button-wrap button {
+  width: 100%;
+}
+
+.sign-in label,
+.sign-up label {
+  margin-right: 10px;
+  font-size: var(--fsize-h3);
+}
