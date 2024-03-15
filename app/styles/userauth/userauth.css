@@ -2,11 +2,11 @@
   .signin
   .signup
   .findpw
+  .userinfo (changeinfo)
 */
 
-.sign-in,
-.sign-up,
-.find-pw {
+.userauth-form {
+  position: relative;
   width: 100%;
   height: calc(100vh - var(--header-height) - var(--footer-height));
   max-width: var(--max-width);
@@ -17,25 +17,23 @@
   align-items: center;
 }
 
-.sign-in section,
-.sign-up section,
-.find-pw section {
+.userauth-form h2 {
+  margin-bottom: 50px;
+}
+
+.userauth-form section {
   width: 100%;
   max-width: var(--max-width);
   margin-bottom: 10px;
 }
 
-.sign-in section.input-wrap,
-.sign-up section.input-wrap,
-.find-pw section.input-wrap {
+.userauth-form section.input-wrap {
   position: relative;
   max-width: 400px;
   margin-bottom: 20px;
 }
 
-.sign-in section.input-wrap>div,
-.sign-up section.input-wrap>div,
-.find-pw section.input-wrap>div {
+.userauth-form section.input-wrap>div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,9 +41,7 @@
   margin-bottom: 10px;
 }
 
-.sign-in section.button-wrap,
-.sign-up section.button-wrap,
-.find-pw section.button-wrap {
+.userauth-form section.button-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,15 +50,11 @@
   padding: 0 20px;
 }
 
-.sign-in .button-wrap button,
-.sign-up .button-wrap button,
-.find-pw .button-wrap button {
+.userauth-form .button-wrap button {
   width: 100%;
 }
 
-.sign-in label,
-.sign-up label,
-.find-pw label {
+.userauth-form label {
   margin-right: 10px;
   font-size: var(--fsize-h3);
 }
