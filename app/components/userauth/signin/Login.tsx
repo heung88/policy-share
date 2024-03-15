@@ -26,7 +26,8 @@ export const Login = () => {
 
   return (
     <>
-      <form id="signIn" className="sign-in" action="">
+      <form id="signIn" className="userauth-form" action="">
+        <h2>로그인</h2>
         <section className="input-wrap">
           <div>
             <label htmlFor="userId">매장아이디</label>
