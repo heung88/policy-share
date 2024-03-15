@@ -5,6 +5,7 @@
   font-size: 0;
   font-weight: var(--fweight-normal);
   box-sizing: border-box;
+  cursor: default;
 }
 
 h1,
@@ -43,7 +44,7 @@ strong {
   all: unset;
 }
 
-h2 a,
+a,
 button,
 input[type="button"],
 input[type="submit"] {
