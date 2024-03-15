@@ -13,7 +13,9 @@ export const Signup = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
 
-  const handleSubmit = () => {};
+  const handleSubmit = (event: React.FormEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+  };
 
   const handleLocation = (event: React.FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
