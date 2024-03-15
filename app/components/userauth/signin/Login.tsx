@@ -20,7 +20,7 @@ export const Login = () => {
 
   const handleLocation = (event: React.FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    if (event.currentTarget.textContent === "등록신청") router.push("./signup");
+    if (event.currentTarget.textContent === "등록신청") router.push("/userauth/signup");
     else if (event.currentTarget.textContent === "비밀번호찾기") console.log(3);
   };
 
