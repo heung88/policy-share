@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Category } from "@/app/components/management/Category";
+import { Category } from "@/app/components/management/ManagementSubCategory";
 import { StoreList } from "@/app/components/management/StoreList";
 import { AgencyList } from "@/app/components/management/AgencyList";
 import { RegiAgency } from "@/app/components/management/RegiAgency";

@@ -1,7 +1,7 @@
 import React from "react";
 import button from "@/app/styles/button.module.css";
 
-export const Category = (props: any) => {
+export const ManagementSubCategory = (props: any) => {
   const handleCategory = (event: React.FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
     if (event.currentTarget.textContent === "대리점 목록") {
@@ -17,7 +17,7 @@ export const Category = (props: any) => {
 
   return (
     <>
-      <nav className="management-nav">
+      <div className="sub-category">
         <ul>
           <li>
             <button className={button.category} onClick={handleCategory}>
@@ -40,7 +40,7 @@ export const Category = (props: any) => {
             </button>
           </li>
         </ul>
-      </nav>
+      </div>
     </>
   );
 };
