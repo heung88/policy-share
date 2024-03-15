@@ -1,13 +1,22 @@
+import Link from "next/link";
 import React from "react";
 
 export const Nav = () => {
   return (
     <nav className="main-category">
       <ul>
-        <li>메뉴1</li>
-        <li>메뉴2</li>
-        <li>메뉴3</li>
-        <li>메뉴4</li>
+        <li>
+          <Link href={"/"}>메뉴1</Link>
+        </li>
+        <li>
+          <Link href={"/"}>메뉴2</Link>
+        </li>
+        <li>
+          <Link href={"/"}>메뉴3</Link>
+        </li>
+        <li>
+          <Link href={"/"}>메뉴4</Link>
+        </li>
       </ul>
     </nav>
   );

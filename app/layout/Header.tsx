@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Nav } from "../components/menu/Nav";
+import { AdminNav } from "../components/main/admin/menu/AdminNav";
 import "@/app/styles/layout.css";
 
 export const Header = () => {
@@ -12,6 +13,7 @@ export const Header = () => {
         </Link>
       </h2>
       <Nav />
+      <AdminNav />
     </header>
   );
 };
