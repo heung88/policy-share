@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import button from "@/app/styles/button.module.css";
 import input from "@/app/styles/input.module.css";
-import styled from "styled-components";
 import { inputValue } from "@/app/utils/inputValue";
 import { useRouter } from "next/navigation";
+import "@/app/styles/userauth/userauth.css";
 
 export const Login = () => {
   const [userId, setUserId] = useState("");
@@ -26,8 +26,8 @@ export const Login = () => {
 
   return (
     <>
-      <FormStyle id="auth_form" action="">
-        <SectionStyle className="input-wrap">
+      <form id="signIn" className="sign-in" action="">
+        <section className="input-wrap">
           <div>
             <label htmlFor="userId">매장아이디</label>
             <input id="userId" className={input.basic + " " + input.borderBottom} placeholder=" " type="text" value={userId} onChange={(event) => inputValue(event, setUserId)} />
@@ -40,70 +40,21 @@ export const Login = () => {
             <label htmlFor="userPassword">비밀번호</label>
             <input id="userPassword" className={input.basic + " " + input.borderBottom} placeholder=" " type="password" value={password} onChange={(event) => inputValue(event, setPassword)} />
           </div>
-        </SectionStyle>
-        <SectionStyle className="button-wrap">
+        </section>
+        <section className="button-wrap">
           <button className={button.basic + " " + button.submit} onClick={handleSubmit}>
             로그인
           </button>
-        </SectionStyle>
-        <SectionStyle className="button-wrap">
+        </section>
+        <section className="button-wrap">
           <button className={button.basic + " " + button.normal} onClick={handleLocation}>
             등록신청
           </button>
           <button className={button.basic + " " + button.normal} onClick={handleLocation}>
             비밀번호찾기
           </button>
-        </SectionStyle>
-      </FormStyle>
+        </section>
+      </form>
     </>
   );
 };
-
-const FormStyle = styled.form`
-  width: 100%;
-  height: calc(100vh - var(--header-height) - var(--footer-height));
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const SectionStyle = styled.section`
-  width: 100%;
-  max-width: var(--max-width);
-  margin-bottom: 10px;
-
-  &.input-wrap {
-    position: relative;
-    max-width: 400px;
-    margin-bottom: 20px;
-
-    & > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-      margin-bottom: 10px;
-    }
-  }
-
-  &.button-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    max-width: 400px;
-    padding: 0 20px;
-
-    & button {
-      width: 100%;
-    }
-  }
-
-  & label {
-    margin-right: 10px;
-    font-size: var(--fsize-h3);
-  }
-`;
