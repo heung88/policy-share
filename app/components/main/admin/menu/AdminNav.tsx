@@ -1,7 +1,8 @@
-import { ManagementSubCategory } from "@/app/components/management/ManagementSubCategory";
+import { SubCategoryStore } from "@/app/components/main/admin/menu/SubCategoryStore";
 import React from "react";
+import { SubCategoryAgency } from "./SubCategoryAgency";
 
-export const AdminNav = () => {
+export const AdminNav = ({ setManagementType }: { setManagementType: (type: string) => void }) => {
   return (
     <nav className="admin-category">
       <ul>
@@ -10,9 +11,15 @@ export const AdminNav = () => {
         </li>
         <li>
           {/* <Link href={"/admin/management"}>대리점/판매점 관리</Link> */}
-          <input type="radio" name="management" id="adminManagement" defaultChecked />
-          <label htmlFor="adminManagement">대리점/판매점 관리</label>
-          <ManagementSubCategory />
+          <input type="radio" name="management" id="adminManagementAgency" defaultChecked />
+          <label htmlFor="adminManagementAgency">대리점 관리</label>
+          <SubCategoryAgency setManagementType={setManagementType} />
+        </li>
+        <li>
+          {/* <Link href={"/admin/management"}>대리점/판매점 관리</Link> */}
+          <input type="radio" name="management" id="adminManagementStore" />
+          <label htmlFor="adminManagementStore">판매점 관리</label>
+          <SubCategoryStore setManagementType={setManagementType} />
         </li>
         <li>
           <input type="radio" name="management" id="adminPolicy" />

@@ -2,17 +2,20 @@
 
 :root {
   --max-width: 1024px;
-  --nav-height: 40px;
   --header-height: 80px;
   --footer-height: 150px;
+  --nav-height: 40px;
+  --tag-height: 30px;
+
   --header-total-height: calc(var(--header-height) + var(--nav-height));
   --main-height: calc(100vh - var(--header-total-height) + var(--footer-height));
 
   --color-main: #ff5656;
+  --color-sub: #ffdada;
   --color-black: #222;
-  --color-green: green;
-  --color-blue: blue;
-  --color-red: red;
+  --color-green: #2fbe3e;
+  --color-blue: #256ef0;
+  --color-red: #d84848;
 
   --color-gray100: #f1f1f1;
   --color-gray200: #e1e1e1;
@@ -33,9 +36,10 @@
   --fcolor-main: var(--color-main);
   --fcolor-placeholder: var(--color-gray300);
 
-  --fweight-light: 100;
-  --fweight-normal: 600;
-  --fweight-bold: 900;
+  --fweight-light: 200;
+  --fweight-normal: 400;
+  --fweight-bold: 600;
+  --fweight-black: 900;
 
   --trans-short: .3s;
   --trans-long: .7s;
