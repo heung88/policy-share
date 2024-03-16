@@ -13,6 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko-kr">
+      {/* <body onContextMenu={() => false} onDragStart={() => false} onSelect={() => false} onKeyDown={() => false}> */}
       <body>
         <Header />
         <main>{children}</main>
