@@ -136,7 +136,7 @@ main {
 
 .warnning-message {
   position: absolute;
-  top: calc(var(--nav-height) + 20px);
+  top: calc(var(--nav-height) + 40px);
   font-size: var(--fsize-main);
   color: var(--color-red);
 }
