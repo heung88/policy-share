@@ -1,28 +1,34 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Category } from "@/app/components/management/ManagementSubCategory";
-import { StoreList } from "@/app/components/management/StoreList";
-import { AgencyList } from "@/app/components/management/AgencyList";
-import { RegiAgency } from "@/app/components/management/RegiAgency";
-import { RegiStore } from "@/app/components/management/RegiStore";
+import React, { useState } from "react";
+import { AdminNav } from "@/app/components/main/admin/menu/AdminNav";
+import { SearchInput } from "@/app/components/management/SearchInput";
+import { SearchList } from "@/app/components/management/SearchList";
 import "@/app/styles/admin/management.css";
 
 export default function page() {
-  const [managementType, setManagementType] = useState("대리점 목록");
+  const defaultType = "대리점 목록";
+  const [keyword, setKeyword] = useState<string>("");
+  const [managementType, setManagementType] = useState<string>(defaultType);
+
+  const listComponent = (
+    <>
+      <SearchInput setKeyword={setKeyword} />
+      <SearchList managementType={managementType} keyword={keyword} />;
+    </>
+  );
+  const manageComponent = "";
 
   const handleComponents = (managementType: string) => {
-    if (managementType === "대리점 목록") return <AgencyList />;
-    else if (managementType === "대리점 등록") return <RegiAgency />;
-    else if (managementType === "판매점 목록") return <StoreList />;
-    else if (managementType === "판매점 등록") return <RegiStore />;
+    if (managementType.includes("목록")) return listComponent;
+    else if (managementType.includes("관리")) return manageComponent;
   };
 
   return (
     <>
       <section className="management-wrap">
-        <h3 className="a11y-hidden">대리점/판매점 관리</h3>
-        <Category setManagementType={setManagementType} />
+        <h3>{managementType}</h3>
+        <AdminNav setManagementType={setManagementType} />
         {handleComponents(managementType)}
       </section>
     </>

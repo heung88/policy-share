@@ -33,14 +33,21 @@ export const FindPw = () => {
           </div>
           <div>
             <label htmlFor="userId">직원이름</label>
-            <input id="userName" className={input.basic + " " + input.borderBottom} placeholder=" " type="text" value={userName} onChange={(event) => inputValue(event, setUserName)} />
+            <input
+              id="userName"
+              className={input.basic + " " + input.borderBottom}
+              placeholder=" "
+              type="text"
+              value={userName}
+              onChange={(event) => inputValue(event, setUserName)}
+            />
           </div>
         </section>
         <section className="button-wrap">
           <button className={button.basic + " " + button.submit} onClick={handleSubmit}>
             요청
           </button>
-          <button className={button.basic + " " + button.cancel} onClick={handleLocation}>
+          <button className={button.basic + " " + button.normal} onClick={handleLocation}>
             취소
           </button>
         </section>

@@ -9,18 +9,20 @@
   transition-duration: var(--trans-short), var(--trans-short);
 }
 
-.basic:hover {
+.basic.normal {
+  background-color: #fff;
+  color: var(--fcolor-black);
+}
+
+.basic.normal:hover {
   background-color: var(--color-black);
   color: #fff;
 }
 
-.basic.normal {
-  color: var(--fcolor-black);
-}
-
 .basic.submit {
   border-color: var(--color-main);
-  color: var(--color-main)
+  background-color: #fff;
+  color: var(--color-main);
 }
 
 .basic.submit:hover {
