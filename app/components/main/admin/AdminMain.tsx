@@ -1,4 +1,5 @@
 import React from "react";
+import { AdminNav } from "./menu/AdminNav";
 
 export const AdminMain = () => {
   return (
